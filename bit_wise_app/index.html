@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+            font-family: monospace;
+            margin: 0;
+            box-sizing: border-box;
+            padding: 0;
+            color: white;
+        }
+        div.wrap{
+            height: 100vh;
+            width: 100%;
+            display: block;
+            background-color: slateblue;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .permsForm{
+            width: 100%;
+            max-width: 500px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 2em 0;
+            accent-color: red;
+        }
+
+        .none {
+            color: rgb(241, 119, 119);
+        }
+        .all {
+            color: rgb(48, 225, 110);
+        }
+        h1{
+            text-align: center;
+        }
+    </style>
+    <title>Bit Manipulation</title>
+</head>
+<body>
+    <div class="wrap">
+        <h1>
+            User's permission: <span id="permsSpan"> </span>
+        </h1>
+            <form name="permsForm" class="permsForm">
+                <div>
+                    <input type="checkbox" id="read">
+                    <label for="read">READ</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="write">
+                    <label for="write">WRITE</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="execute">
+                    <label for="execute">EXECUTE</label>
+                </div>
+            </form>
+    </div>
+</body>
+</html>
+<script src="./index.js">
+
+</script>
