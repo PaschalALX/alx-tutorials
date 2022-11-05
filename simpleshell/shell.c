@@ -40,6 +40,9 @@ int main(void)
 			}
 			if (!id)
 			{
+				if (lineptr[0] == 10)
+					continue;
+
 				lineptr[strlen(lineptr) - 1] = 0;
 				av[0] = lineptr;
 
