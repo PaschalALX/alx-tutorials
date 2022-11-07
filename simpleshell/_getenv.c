@@ -46,8 +46,10 @@ char *getvalue(char *line)
 /**
  * _getenv - function  searches  the  environment list
  * @name: variable to search
+ *
+ * Return: environment variable value
  */
-void _getenv(const char *name)
+char *_getenv(const char *name)
 {
 	char *match_line;
 
@@ -56,33 +58,9 @@ void _getenv(const char *name)
 		if (check_var(*environ, name))
 		{
 			match_line = *environ;
-			break;
+			return (getvalue(match_line));
 		}
 		environ++;
 	}
-	printf("%s\n", getvalue(match_line));
-}
-
-/**
- * main - Entry point
- * @ac: argument count
- * @av: argument vector
- *
- * Return: Always Success (0)
- */
-int main(int ac, char **av)
-{
-	if (ac < 2)
-	{
-		printf("Usage: %s path_to_file ...\n", av[0]);
-		return (1);
-	}
-	av++;
-
-	while (*av)
-	{
-		_getenv(*av);
-		av++;
-	}
-	return (0);
+	return (NULL);
 }
