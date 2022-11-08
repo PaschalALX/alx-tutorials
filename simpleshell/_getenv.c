@@ -14,6 +14,9 @@ int check_var(char *env, const char *name)
 {
 	int i = 0;
 
+	if (!env || !name)
+		return (0);
+
 	for (; env[i]; i++)
 	{
 		if (env[i] == '=')
