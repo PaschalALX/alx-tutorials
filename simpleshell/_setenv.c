@@ -116,6 +116,7 @@ int _setenv(const char *name, const char *value, int overwrite)
 int main(void)
 {
 	_setenv("OLDPWD", "PASCHAL_MARK_OKAFOR", 1);
+	_setenv("PARTNER_NAME", "TASLIM_EZE", 0);
 
 	while (*environ)
 	{
