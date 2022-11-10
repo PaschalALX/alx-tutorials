@@ -24,9 +24,9 @@ char *_strtok(char *str, char *delm)
 		return (NULL);
 
 	/* checks if both backup and str are NULL */
-	/* if (!backup && !str) */
-	/* 	return (NULL); */
-
+	if (!backup && !str)
+		return (NULL);
+	
 	/* checks if backup is NULL && str has value */
 	/* Function's first call */
 	if (!backup && str)
