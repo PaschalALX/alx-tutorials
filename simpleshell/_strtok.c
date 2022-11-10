@@ -24,8 +24,8 @@ char *_strtok(char *str, char *delm)
 		return (NULL);
 
 	/* checks if both backup and str are NULL */
-	if (!backup && !str)
-		return (NULL);
+	/* if (!backup && !str) */
+	/* 	return (NULL); */
 
 	/* checks if backup is NULL && str has value */
 	/* Function's first call */
@@ -51,6 +51,10 @@ char *_strtok(char *str, char *delm)
 		str++;
 	}
 	str++;
+
+	/* moves pointer over successive occurence of delimiter */
+	while (*str == *delm)
+		str++;
 	rtn = backup;
 	backup = str;
 	return (rtn);
