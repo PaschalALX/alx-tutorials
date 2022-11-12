@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-	char text[] = "Monday-Wednesday-Friday-Sunday-Tuesday";
+	char text[] = "Monday------Wednesday-Friday-Sunday-Tuesday";
 	char *token = _strtok(text, "-");
 
 	while (token)
